@@ -1,2 +1,3 @@
 # dotnetcore
 practicing dotnetcore
+.
