@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Scripts\MaisProdutos.sql" />
+    <None Remove="Scripts\Usuarios.sql" />
+    <None Remove="Scripts\Usuarios2.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\MaisProdutos.sql" />
+    <EmbeddedResource Include="Scripts\Usuarios2.sql" />
+    <EmbeddedResource Include="Scripts\Usuarios.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="dbup" Version="4.2.0" />
+  </ItemGroup>
+</Project>
