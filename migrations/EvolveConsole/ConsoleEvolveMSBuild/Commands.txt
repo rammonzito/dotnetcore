@@ -1,0 +1,1 @@
+%MSBuild%\msbuild.exe C:\Lab\dotnetcore\migrations\EvolveConsole\ConsoleEvolveMSBuild\Evolve.NewTarget.targets /t:GenerateNetcoreExe

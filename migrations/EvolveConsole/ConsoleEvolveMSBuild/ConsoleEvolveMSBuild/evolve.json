@@ -1,0 +1,11 @@
+{
+    "Evolve.Command": "migrate",
+    "Evolve.Database": "sqlserver",
+    //"Evolve.ConnectionString": "Server=localhost;Database=Mocks;User ID=rootmock;Password=123456abc@;",
+    "Evolve.ConnectionString": "Data Source=C:/Windows/Temp/mydb.dev.db;",
+    "Evolve.Locations": "db/other",
+    "Evolve.EraseOnValidationError": true,
+    "Evolve.EraseDisabled": true,
+    "Evolve.OutOfOrder": true,
+    "Evolve.Placeholder.table4": "table_4"
+}
