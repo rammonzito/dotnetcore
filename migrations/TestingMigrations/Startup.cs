@@ -37,7 +37,7 @@ namespace TestingMigrations
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            var connetionString = "Data Source=localhost";
+            var connetionString = "Data Source=localhost;Initial Catalog=Mocks;User ID=rootmock;Password=123456abc@";
             var evolveConnection = new SqlConnection(connetionString);
 
             try

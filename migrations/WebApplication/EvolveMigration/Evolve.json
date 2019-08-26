@@ -1,0 +1,7 @@
+{
+    "Evolve.Database": "sqlserver",
+    "Evolve.ConnectionString": "Data Source=localhost;Database=Moq;User ID=rootmock;Password=123456abc@;",
+    "Evolve.Locations": "db/migrations",
+    "Evolve.Command": "migrate",
+    "Evolve.EraseDisabled": "true"
+}

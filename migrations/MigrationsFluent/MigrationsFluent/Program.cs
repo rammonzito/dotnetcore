@@ -22,7 +22,7 @@ namespace MigrationsFluent
         }
         private static IServiceProvider CreateServices()
         {
-            var connetionString = "Data Source=localhost;Initial Catalog=Mocks;User ID=rootmock;Password=123456abc@";
+            var connetionString = "Data Source=localhost;Initial Catalog=Moq;User ID=rootmock;Password=123456abc@";
 
             return new ServiceCollection()
             .AddFluentMigratorCore()

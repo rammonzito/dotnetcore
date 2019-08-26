@@ -1,1 +1,0 @@
-﻿INSERT INTO USUARIOS VALUES ('mil')

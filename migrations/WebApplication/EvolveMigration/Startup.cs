@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace EvolveMigration
 {
@@ -33,27 +31,26 @@ namespace EvolveMigration
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            var connetionString = "Data Source=localhost;Initial Catalog=Mocks;User ID=rootmock;Password=123456abc@";
-            var evolveConnection = new SqlConnection(connetionString);
+            //var connetionString = "Data Source=localhost;Initial Catalog=Mocks;User ID=rootmock;Password=123456abc@";
+            //var evolveConnection = new SqlConnection(connetionString);
 
-            try
-            {
-                var evolve = new Evolve.Evolve(evolveConnection, msg => _logger.LogInformation("testing migration"))
-                {
+            //try
+            //{
+            //    var evolve = new Evolve.Evolve(evolveConnection, msg => _logger.LogInformation("testing migration"))
+            //    {
 
-                    Locations = new List<string> { "Migrations/db" },
-                    IsEraseDisabled = true,
+            //        Locations = new List<string> { "db/migrations" },
+            //        IsEraseDisabled = true,
 
-                };
+            //    };
 
-                evolve.Migrate();
-            }
-            catch (Exception ex)
-            {
-                _logger.LogCritical("Database migration failed.", ex);
-                throw;
-            }
-
+            //    evolve.Migrate();
+            //}
+            //catch (Exception ex)
+            //{
+            //    _logger.LogCritical("Database migration failed.", ex);
+            //    throw;
+            //}
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 

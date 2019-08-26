@@ -5,14 +5,14 @@ using System.Text;
 
 namespace MigrationsFluent.Migrations
 {
-    [Migration(201908219419092, "Issue 941909 - other script")]
+    [Migration(20190, "Issue 941909 - other script")]
     public class AddLogTable : Migration
     {
         public override void Up()
         {
 
             //Testing Execute
-            IfDatabase("SqlServer").Insert.IntoTable("Usuarios").Row(new { Nome = "Kashiha" });
+            IfDatabase("SqlServer").Update.Table("Usuarios").Set(new { Nome = "John" }).Where(new { Nome = "Jonis - Developer" });
         }
         public override void Down()
         {
