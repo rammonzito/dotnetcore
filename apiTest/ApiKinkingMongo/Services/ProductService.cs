@@ -13,13 +13,10 @@ namespace ApiKinkingMongo.Services
 
         public ProductService(ISettings settings)
         {
-            string ConnectionString = "mongodb://localhost:17017";
-            string DatabaseName = "lojinha";
-            string ProductsCollectionName = "produtos";
-            var client = new MongoClient(/*settings.ConnectionString*/ConnectionString);
-            var database = client.GetDatabase(/*settings.DatabaseName*/DatabaseName);
+            var client = new MongoClient(settings.ConnectionString);
+            var database = client.GetDatabase(settings.DatabaseName);
 
-            _products = database.GetCollection<Product>(/*settings.ProductsCollectionName*/ProductsCollectionName);
+            _products = database.GetCollection<Product>(settings.ProductsCollectionName);
         }
 
         public List<Product> Get() =>
