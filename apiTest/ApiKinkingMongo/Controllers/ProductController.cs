@@ -32,7 +32,7 @@ namespace ApiKinkingMongo.Controllers
 
             return product;
         }
-
+        
         [HttpPost]
         public ActionResult<Product> Create(Product product)
         {
