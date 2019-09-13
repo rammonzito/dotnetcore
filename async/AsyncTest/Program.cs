@@ -11,11 +11,11 @@ namespace AsyncTest
             OtherClass f = new OtherClass();
             //Making a Orange Juice
             Task<Juice> juice = f.DoTheJuice();
-            Console.WriteLine("Preparing the Juice yet");
+            Console.WriteLine("Smashing the Oranges yet");
             Task<Beef> beef = f.DoTheBeef();
-            Console.WriteLine("Preparing the Beef yet");
+            Console.WriteLine("The beef is on the fire yet!");
             Task.WaitAll(beef, juice);
-            Console.WriteLine("Finish HIM!");
+            Console.WriteLine("The dinner is done!");
             Console.ReadLine();
         }
 

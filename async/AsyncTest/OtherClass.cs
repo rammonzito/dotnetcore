@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -17,8 +15,8 @@ namespace AsyncTest
                 //{
 
                 //}
-            }); 
-            Console.WriteLine("Outing Juice..");
+            });
+            Console.WriteLine("The Juice is done");
             return new Juice();
         }
         public Task<Beef> DoTheBeef()
@@ -30,7 +28,7 @@ namespace AsyncTest
                 //Thread.Sleep(5000);
                 for (int i = 0; i < 1000000000; i++)
                 {
-                    throw new Exception();
+                    //throw new Exception();
                 }
                 return new Beef();
             });
@@ -42,8 +40,8 @@ namespace AsyncTest
 
             //    }
             //}); 
-
-            Console.WriteLine("Outing Beef..");
+            Console.WriteLine("The beef is done");
+            
             return beef;
         }
 
